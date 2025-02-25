@@ -1,0 +1,67 @@
+# Geological & Mineral-Based
+malachite: "#0BDA51"
+cinnabar: "#E44D2E"
+mummy_brown: "#824B27"
+limonite: "#AC8D35"
+eburnean: "#FFFFE8" (ivory-like)
+mazarine: "#0C0C7C" (deep lapis lazuli blue)
+spodumene: "#8BFFA1" (lithium mineral green)
+labradorite: "#8C9CA0" (feldspar gray-blue)
+
+# Historical Pigments
+dragons_blood: "#C62D42" (ancient resin-based red)
+mummy_blue: "#00FFFF" (early Egyptian pigment)
+caput_mortuum: "#592720" (alchemy "dead head" purple-brown)
+tyrian_purple: "#66023C" (imperial snail-derived dye)
+mummy_red: "#FF0000" (historic but unstable pigment)
+
+# Botanical & Natural
+absinthe_green: "#76B583"
+eden: "#266255" (deep rainforest)
+viridian: "#40826D" (oxidized chromium green)
+reseda: "#6C7C59" (mignonette plant green)
+celadon: "#ACE1AF" (ancient Chinese ceramic green)
+
+# Food & Drink Inspired
+arctic_lime: "#D0FF14"
+quince_jelly: "#FEBE7E"
+creme_de_menthe: "#F1FDE0"
+oolong: "#C99700"
+pamplemousse: "#FFD1A3" (French for grapefruit)
+
+# Scientific/Technical
+synchrotron_blue: "#00AEEF" (particle accelerator Cherenkov radiation)
+quantum_red: "#FF0055" (theoretical physics visualization)
+astrolabe_gray: "#4D4D4D" (navigation instrument patina)
+fluorite_purple: "#9873AC" (mineral fluorescence)
+
+# Modern Design Systems
+cyber_grape: "#58427C"
+laser_lemon: "#FFFF66"
+razzmatazz: "#E3256B"
+shandy_green: "#8F9779"
+ultra_violet: "#645394" (Pantone 2018 Color of the Year)
+
+# Obscure CSS4 Extras
+rebeccapurple: "#663399" (named for web pioneer Eric Meyer's daughter)
+dark_sienna: "#3C1414"
+medium_turquoise: "#48D1CC"
+medium_purple: "#9370DB"
+
+# Cultural & Linguistic Oddities
+smalt: "#003399" (Dutch glass pigment)
+watchet: "#8AB8E6" (Old English pale blue)
+gandalf_gray: "#999999" (Lord of the Rings reference)
+banshee_black: "#1C1C1C"
+
+# Retro/Faded Tones
+haint_blue: "#D1E7FE" (Southern U.S. ghost-warding color)
+arsenic: "#3B444B" (Victorian wallpaper green)
+radium_green: "#90EE90" (glowing watch dials)
+kodak_yellow: "#F0D500" (classic film branding)
+
+# Extreme Unusual Names
+drunk_tank_pink: "#FF99CC" (calming prison cell color)
+vantablack: "#000100" (not true Vantablack, which absorbs 99.96% light)
+stilig_white: "#F0F0F0" (Swedish "stylish white")
+zaffre: "#0014A8" (medieval cobalt blue)

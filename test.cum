@@ -1,0 +1,339 @@
+---
+title: "Test File"
+author: "Allych Lallych"
+date: "1234-56-78_12:34:56"
+compilefor: "tailwindcss"
+import: "styles/styles.yml"
+styles:
+    variables:
+        red: "#ff0000"
+        green: "#00ff00"
+        blue: "#0000ff"
+        yellow: "#ffff00"
+        magenta: "#ff00ff"
+        cyan: "#00ffff"
+        black: "#000000"
+        white: "#ffffff"
+        gray: "#808080"
+        light-red: "#ff8080"
+        light-green: "#80ff80"
+        light-blue: "#8080ff"
+        light-yellow: "#ffff80"
+        light-magenta: "#ff80ff"
+        light-cyan: "#80ffff"
+        dark-red: "#800000"
+        dark-green: "#008000"
+        dark-blue: "#000080"
+        dark-yellow: "#808000"
+        dark-magenta: "#800080"
+        dark-cyan: "#008080"
+    decorators:
+        bold:
+            color: black
+            effect: bold
+        italic:
+            color: black
+            effect: italic
+        underline:
+            color: black
+            effect: underline
+        strikethrough:
+            color: black
+            effect: strikethrough
+        superscript:
+            color: black
+            effect: superscript
+        subscript:
+            color: black
+            effect: subscript
+        code:
+            color: black
+            font: mono
+    default:
+        color: black
+        bg-color: white
+        font: sans
+    header:
+        color: black
+        bg-color: white
+        font: sans
+        header-1:
+            color: black
+            bg-color: white
+            font: sans
+        header-2:
+            color: black
+            bg-color: white
+            font: sans
+        header-3:
+            color: black
+            bg-color: white
+            font: sans
+        header-X:
+            color: black
+            bg-color: white
+            font: sans
+    list:
+        color: black
+        bg-color: white
+        type: bullet
+        font: sans
+        gap: 10px
+    underline:
+        color: black
+        width: 1px
+        style: solid
+    link:
+        color: blue
+        bg-color: white
+        font: sans
+        effect: underline
+    codeblock:
+        color: black
+        bg-color: white
+        font: mono
+        type: chip
+        border-color: black
+        border-width: 2px
+        border-style: solid
+    blockquote:
+        color: black
+        bg-color: white
+        font: sans
+        border-color: black
+        border-width: 2px
+        border-style: solid
+        type: chip
+        main-color: blue
+    horizontal-rule:
+        color: black
+        width: 2px
+        style: solid
+        start: cut
+        end: cut
+    math-equation:
+        type: chip
+        color: black
+        bg-color: white
+    font:
+        sans: "Noto Sans"
+        serif: "Latin Modern"
+        mono: "Jetbrains Mono"
+        math: "Latin Modern Math"
+    table:
+        color: black
+        bg-color: white
+        main-axis: left
+        border-color: black
+        border-width: 2px
+        style: solid
+        gap: 10px
+        main-gap: 10px
+        cell-gap: 2px
+        cell-type: chip
+        cell-color: black
+        cell-bg-color: white
+        main-type: pill
+        main-color: blue
+        main-bg-color: light-blue
+---
+
+# This is a test CubyMark file. It contains all styles and features of CubyMark for testing purposes.
+
+---
+
+# Basic Elements Test:
+
+## Paragraph Test:
+
+This is an example Paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Erat rutrum arcu cras orci proin, risus vivamus cras. Habitant pharetra praesent varius ad suspendisse eleifend viverra conubia. Aptent magnis eleifend sagittis integer dolor a et. Praesent purus curabitur molestie litora ut praesent tincidunt euismod. Tristique nibh maecenas dignissim aliquam turpis taciti auctor. Felis tellus malesuada duis elementum nam. Est lectus mattis elit massa integer euismod dictum platea.
+
+## Headers Test:
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+## Lists Test:
+
+### Dash List:
+
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+- Item 5
+
+### Bullet List:
+
+* Item 1
+* Item 2
+* Item 3
+* Item 4
+* Item 5
+
+### Number List:
+
+1. Item 1
+2. Item 2
+3. Item 3
+4. Item 4
+5. Item 5
+
+### Lowercase Alphabetic List:
+
+a. Item 1
+b. Item 2
+c. Item 3    
+d. Item 4
+e. Item 5
+
+### Uppercase Alphabetic List:
+
+A. Item 1
+B. Item 2
+C. Item 3
+D. Item 4
+E. Item 5
+
+### Lowercase Roman List:
+
+i. Item 1
+ii. Item 2
+iii. Item 3
+iv. Item 4
+v. Item 5
+
+### Uppercase Roman List:
+
+I. Item 1
+II. Item 2
+III. Item 3 
+IV. Item 4
+V. Item 5
+
+## Bold Test:
+
+**This text is bold using double asterisks**
+
+This text contains a **bold** word
+
+## Italics Test:
+
+_This text is italicized using underscores_
+*This text is italicized using asterisks*
+
+This text contains an _italic_ word
+This text also contains an *italic* word, but with asterisks
+
+## Strikethrough Test:
+
+~~This text is strikethrough using tildes~~
+
+This text contains a ~~strikethrough~~ word
+
+## Underlines Test:
+
+__This text is underlined using double underscores__
+
+This text contains an __underlined__ word
+
+## Links Test:
+
+[Link to Google](https://google.com)
+[Link to Arch Linux](https://archlinux.org)
+[Link to Wikipedia](https://wikipedia.org)
+[Link to GitHub](https://github.com)
+[Link to Telegram](https://telegram.org)
+
+This text contains a [link](https://coobyk.github.io/CubyMark) to CubyMark
+
+## Images Test:
+
+![Example Image](https://example.com/image.jpg)
+
+## Codeblocks Test:
+
+```c
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+
+```python
+print("Hello, World!")
+```
+
+```bash
+echo "Hello, World!"
+```
+
+```rust
+fn main() {
+    println!("Hello, World!");
+}
+```
+
+## Blockquotes Test:
+
+> This is a blockquote.
+
+> > This is a nested blockquote.
+>
+> > > This is a nested blockquote.
+>
+> > This is a nested blockquote.
+>
+> That's a strange blockquote structure.
+
+## Horizontal Rules Test:
+
+---
+
+## Math Equations Test:
+
+$$\sqrt{x^2 + y^2}$$
+
+$$x^2 + y^2 = z^2$$
+
+$$\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$$
+
+## Tables Test:
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+
+## Superscript Test:
+
+^This is a superscript^
+
+This text contains a ^superscript^ word
+
+## Subscript Test:
+
+~This is a subscript~
+
+This text contains a ~subscript~ word
+
+## Code Test:
+
+This text contains some `code`.
+
+# Inline Styles Test:
+
+## Colors Test:
+
+These words are %red[red], %yellow[yellow], %green[green], %blue[blue], %magenta[magenta], %cyan[cyan], and %black[black].
+
+These words are %malachite[malachite], 
