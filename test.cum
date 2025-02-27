@@ -301,11 +301,13 @@ fn main() {
 
 ## Math Equations Test:
 
-$$\sqrt{x^2 + y^2}$$
-
-$$x^2 + y^2 = z^2$$
-
-$$\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$$
+$$
+\begin{aligned}
+    y &= mx + b \\
+    m &= \frac{\Delta y}{\Delta x} \\
+    b &= y - mx
+\end{aligned}
+$$
 
 ## Tables Test:
 
@@ -336,4 +338,60 @@ This text contains some `code`.
 
 These words are %red[red], %yellow[yellow], %green[green], %blue[blue], %magenta[magenta], %cyan[cyan], and %black[black].
 
-These words are %malachite[malachite], 
+These words are %malachite[malachite], %arsenic[arsenic], %razzmatazz[razzmatazz], and %viridian[viridian].
+
+### Nested Colors Test:
+
+%blue[This %green[text is %yellow[colored in %red[red], yellow], green], and blue].
+
+%malachite[This %arsenic[text is %razzmatazz[colored in %viridian[viridian], razzmatazz], arsenic], and malachite].
+
+## Background colors Test:
+
+These backgrounds are %bg-red[red], %bg-yellow[yellow], %bg-green[green], %bg-blue[blue], %bg-magenta[magenta], %bg-cyan[cyan], and %bg-black[black].
+
+These backgrounds are %bg-malachite[malachite], %bg-arsenic[arsenic], %bg-razzmatazz[razzmatazz], and %bg-viridian[viridian].
+
+### Nested Background Colors Test:
+
+%bg-blue[This %bg-green[text is %bg-yellow[colored in %bg-red[red], yellow], green], and blue].
+
+%bg-malachite[This %bg-arsenic[text is %bg-razzmatazz[colored in %bg-viridian[viridian], razzmatazz], arsenic], and malachite].
+
+## Mixed colors Test:
+
+This is %blue[blue text on %bg-red[red background]].
+
+This is %red[red text on %bg-blue[blue background]].
+
+This is %malachite[malachite text on %bg-arsenic[arsenic background]].
+
+This is %arsenic[arsenic text on %bg-malachite[malachite background]].
+
+## Gradients Test:
+
+This is %gradient-red-blue[gradient from red to blue].
+
+This is %bg-gradient-red-blue[gradient from red to blue].
+
+This is %gradient-malachite-arsenic[gradient from malachite to arsenic].
+
+This is %bg-gradient-malachite-arsenic[gradient from malachite to arsenic].
+
+## Fonts Test:
+
+This is %font-sans[sans font].
+
+This is %font-serif[serif font].
+
+This is %font-mono[monospace font].
+
+This is %font-math[math font].
+
+## Math Test:
+
+$$\sqrt{x^2 + y^2}$$
+
+$$x^2 + y^2 = z^2$$
+
+$$\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$$
