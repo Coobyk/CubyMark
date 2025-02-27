@@ -1,0 +1,23 @@
+{
+  "name": "cubymark",
+  "version": "1.0.0",
+  "description": "Markdown-like file format with additional styling",
+  "homepage": "https://github.com/Coobyk/CubyMark#readme",
+  "bugs": {
+    "url": "https://github.com/Coobyk/CubyMark/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coobyk/CubyMark.git"
+  },
+  "license": "MIT",
+  "author": "Coobyk",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.0.9"
+  }
+}

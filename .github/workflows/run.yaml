@@ -1,0 +1,78 @@
+on:
+    push:
+        branches:
+            - main
+    schedule:
+        - cron: "*/15 * * * *"
+    workflow_dispatch:
+
+permissions:
+    contents: write
+    pages: write
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: false
+
+jobs:
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Install Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.x"
+
+            - name: Prepare Python
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+
+            - name: Compile CubyMark
+              run: |
+                  python3 cubymark.py -i input.cum -o src/index.html
+
+            - name: Update footer with build info
+              run: |
+                  cd src
+                  BUILD_DATE=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+                  COMMIT_SHA=$(git rev-parse --short HEAD)
+                  sed -i "s|build_placeholder_dMyCV3BHWcQp|Built on ${BUILD_DATE} (${COMMIT_SHA})|g" *.html
+                  cd ..
+
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "latest"
+
+            - name: Install npm packages
+              run: |
+                  npm install
+
+            - name: Copy and prepare files
+              run: |
+                  mkdir -p dist
+                  cp -r src/* dist
+                  rm -f dist/{style.css,input.css}
+
+            - name: Build
+              run: |
+                  npx tailwindcss -i src/input.css -o dist/style.css --minify
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: "dist"
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
