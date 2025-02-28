@@ -1,11 +1,13 @@
-def convert(input_file, output_file):
-    with open(input_file, "r") as f:
-        content = f.read()
-    
-    print(content)
+import re
+import argparse
 
-    with open(output_file, "w") as f:
-        f.write(content)
+parser = argparse.ArgumentParser(description="Convert CubyMark to TailwindCSS HTML")
 
-if (__name__ == "__main__"):
-    convert("input.cum", "output.html")
+parser.add_argument("-i", "--input", required=True, help="Input CubyMark file")
+parser.add_argument("-o", "--output", required=True, help="Output TailwindCSS HTML file")
+
+args = parser.parse_args()
+
+with open(args.input, "r") as f:
+    input_text = f.read()
+
