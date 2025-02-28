@@ -36,7 +36,7 @@ jobs:
 
             - name: Compile CubyMark
               run: |
-                  python3 main.py -i input.cum -o src/index.html
+                  python3 main.py -i test.cum -o src/index.html
 
             - name: Update footer with build info
               run: |
