@@ -7,6 +7,10 @@ def convert_cubymark_to_html(input_text):
 
     # Process Paragraphs
     html = re.sub(r"(.+?)\n", r"<p>\1</p>", html)
+
+    # Process Lists
+    html = re.sub(r"^(?:- )(.+)$", r"<li>\2</li>", html)
+
     return html
 
 if __name__ == "__main__":
@@ -24,6 +28,9 @@ if __name__ == "__main__":
     try:
         with open(args.input, "r", encoding="utf-8") as f:
             input_text = f.read()
+            if not input_text.strip():
+                print("Input file is empty. Please provide a valid CubyMark file.")
+                exit(1)
     except IOError as e:
         print(f"Error reading input file: {e}")
         exit(1)
@@ -32,6 +39,11 @@ if __name__ == "__main__":
     html = convert_cubymark_to_html(input_text)
 
     # Write the converted HTML to the output file
-    with open(args.output, "w") as f:
-        f.write(html)
+    try:
+        with open(args.output, "w") as f:
+            f.write(html)
+    except IOError:
+        print(f"Error writing output file: {args.output} does not exist. Creating it.")
+        with open(args.output, "x") as f:
+            f.write(html)
 
