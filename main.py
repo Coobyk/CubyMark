@@ -10,7 +10,7 @@ def convert_cubymark_to_html(input_text):
     html = re.sub(r"(.+?)\n", r"<p>\1</p>", html)
 
     # Process Lists
-    html = re.sub(r"^(?:- )(.+)$", r"<li>\2</li>", html)
+    html = re.sub(r"^(?:- )(.+)$", r"<li>\1</li>", html)
 
     return html
 
@@ -25,17 +25,16 @@ def checkfiles():
         print("Input file does not exist. Please provide a valid CubyMark file.")
         exit(1)
 
-    # Check if the output file exists
-    if not args.output:
-        print("Output file does not exist. Creating empty file.")
-        # Create the required directories if needed
-        output_dir = os.path.dirname(args.output.name)
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+    # Create the required directories for the output file if needed
+    output_dir = os.path.dirname(args.output.name)
+    if output_dir and not os.path.exists(output_dir):
+        try:
+            os.makedirs(output_dir, exist_ok=True)
+        except OSError as e:
+            print(f"Error creating output directory: {e}")
+            exit(1)
 
-        # Create the output file if it does not exist
-        with open(args.output.name, "x") as f:
-            f.write("")
+
 
 if __name__ == "__main__":
     # Initialize argument parser
