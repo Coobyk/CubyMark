@@ -1,5 +1,6 @@
 import re
 import argparse
+import os
 
 def convert_cubymark_to_html(input_text):
     # Process Headers
@@ -27,7 +28,13 @@ def checkfiles():
     # Check if the output file exists
     if not args.output:
         print("Output file does not exist. Creating empty file.")
-        with open(args.output, "x") as f:
+        # Create the required directories if needed
+        output_dir = os.path.dirname(args.output.name)
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        # Create the output file if it does not exist
+        with open(args.output.name, "x") as f:
             f.write("")
 
 if __name__ == "__main__":
