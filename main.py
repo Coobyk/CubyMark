@@ -13,6 +13,23 @@ def convert_cubymark_to_html(input_text):
 
     return html
 
+def checkfiles():
+    # Check if the input file is a CubyMark file
+    if not args.input.name.endswith(".cum"):
+        print("Input file is not a CubyMark file. Please provide a valid CubyMark file.")
+        exit(1)
+
+    # Check if the input file exists
+    if not args.input:
+        print("Input file does not exist. Please provide a valid CubyMark file.")
+        exit(1)
+
+    # Check if the output file exists
+    if not args.output:
+        print("Output file does not exist. Creating empty file.")
+        with open(args.output, "x") as f:
+            f.write("")
+
 if __name__ == "__main__":
     # Initialize argument parser
     parser = argparse.ArgumentParser(description="Convert CubyMark to TailwindCSS HTML")
@@ -23,6 +40,8 @@ if __name__ == "__main__":
 
     # Parse the arguments
     args = parser.parse_args()
+
+    checkfiles()
 
     # Read the content of the input file
     try:
@@ -39,11 +58,6 @@ if __name__ == "__main__":
     html = convert_cubymark_to_html(input_text)
 
     # Write the converted HTML to the output file
-    try:
-        with open(args.output, "w") as f:
-            f.write(html)
-    except IOError:
-        print(f"Error writing output file: {args.output} does not exist. Creating it.")
-        with open(args.output, "x") as f:
-            f.write(html)
+    with open(args.output, "w") as f:
+        f.write(html)
 
