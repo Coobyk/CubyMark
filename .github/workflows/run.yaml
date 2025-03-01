@@ -34,6 +34,10 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
 
+            - name: Delete compiled files
+              run: |
+                  rm -rf src
+
             - name: Compile CubyMark
               run: |
                   python3 main.py -i test.cum -o src/index.html

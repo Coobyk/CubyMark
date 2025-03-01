@@ -16,7 +16,7 @@ def convert_cubymark_to_html(input_text):
 
 def checkfiles():
     # Check if the input file is a CubyMark file
-    if not args.input.name.endswith(".cum"):
+    if not args.input.endswith(".cum"):
         print("Input file is not a CubyMark file. Please provide a valid CubyMark file.")
         exit(1)
 
@@ -26,7 +26,7 @@ def checkfiles():
         exit(1)
 
     # Create the required directories for the output file if needed
-    output_dir = os.path.dirname(args.output.name)
+    output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
         try:
             os.makedirs(output_dir, exist_ok=True)
@@ -41,8 +41,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert CubyMark to TailwindCSS HTML")
 
     # Add input and output file arguments
-    parser.add_argument("-i", "--input", type=argparse.FileType('r'), required=True, help="Input CubyMark file")
-    parser.add_argument("-o", "--output", type=argparse.FileType('w'), required=True, help="Output TailwindCSS HTML file")
+    parser.add_argument("-i", "--input", required=True, help="Input CubyMark file")
+    parser.add_argument("-o", "--output", required=True, help="Output TailwindCSS HTML file")
 
     # Parse the arguments
     args = parser.parse_args()
