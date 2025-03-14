@@ -22,7 +22,7 @@ def checkfiles():
         exit(1)
 
     # Check if the input file is a CubyMark file
-    if not args.input.lower().endswith(".cum") or not args.output.lower().endswith(".cubymark"):
+    if not args.input.lower().endswith(".cum"):
         print("Input file is not a CubyMark file. Please provide a valid CubyMark file.")
         exit(1)
 
