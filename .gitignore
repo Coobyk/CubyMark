@@ -367,3 +367,4 @@ cython_debug/
 
 # Qodo Gen AI
 .qodo/
+.qodo

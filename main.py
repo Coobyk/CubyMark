@@ -3,6 +3,7 @@ import argparse
 import os
 
 def convert_cubymark_to_html(input_text):
+
     # Process Headers
     html = re.sub(r"^(#+)\s+(.+)$", r"<h\1>\0</h\1>", input_text)
 
@@ -15,14 +16,14 @@ def convert_cubymark_to_html(input_text):
     return html
 
 def checkfiles():
-    # Check if the input file is a CubyMark file
-    if not args.input.endswith(".cum"):
-        print("Input file is not a CubyMark file. Please provide a valid CubyMark file.")
-        exit(1)
-
     # Check if the input file exists
     if not args.input:
         print("Input file does not exist. Please provide a valid CubyMark file.")
+        exit(1)
+
+    # Check if the input file is a CubyMark file
+    if not args.input.lower().endswith(".cum") or not args.output.lower().endswith(".cubymark"):
+        print("Input file is not a CubyMark file. Please provide a valid CubyMark file.")
         exit(1)
 
     # Create the required directories for the output file if needed
@@ -32,6 +33,15 @@ def checkfiles():
             os.makedirs(output_dir, exist_ok=True)
         except OSError as e:
             print(f"Error creating output directory: {e}")
+            exit(1)
+    
+    # Create CSS file if needed
+    if not os.path.exists("src/input.css"):
+        try:
+            with open("src/input.css", "w") as f:
+                f.write("@tailwind base;\n@tailwind components;\n@tailwind utilities;")
+        except OSError as e:
+            print(f"Error creating CSS file: {e}")
             exit(1)
 
 
