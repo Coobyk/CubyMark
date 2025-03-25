@@ -5,6 +5,8 @@ Visit the [CubyMark Wiki](https://github.com/Coobyk/CubyMark/wiki) for more info
 
 Current Progress:
 
+Progress is halted because reasons. Don't expect anything in the next few months/years.
+
 File format: [x] Complete
 
 Compiler: 
